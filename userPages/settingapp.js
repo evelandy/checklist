@@ -6,14 +6,14 @@ document.getElementById('editPassword').addEventListener('submit', editPassword)
 function loader() {
     let token = localStorage.getItem('x-access-token');
     if(!token){
-        window.location.href = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/login_signup/login.html"; 
+        window.location.href = "../login_signup/login.html"; 
     } else {
         let userInfo = JSON.parse(atob(token.split('.')[1]));
         let expireTime = userInfo.exp;
         let timeNow = Math.floor((new Date()).getTime() / 1000);
         let timeUp = expireTime - timeNow;
         if(timeUp <= 0){
-            window.location.href = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/login_signup/login.html";
+            window.location.href = "../login_signup/login.html";
         } else {
             getUser();
         }
@@ -22,7 +22,7 @@ function loader() {
 
 function logout() {
     localStorage.removeItem('x-access-token');
-    window.location = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/landingPage/index.html";
+    window.location = "../index.html";
 }
 
 function getUser() {
@@ -30,7 +30,7 @@ function getUser() {
     let userInfo = JSON.parse(atob(token.split('.')[1]));
     let id = userInfo.id;
 
-    fetch('http://checklist.ml/api/user/' + id, {
+    fetch('http://98.198.145.46/api/user/' + id, {
         method: 'GET',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -70,7 +70,7 @@ function removeUser() {
         let id = userInfo.id;
         logout();
         
-        fetch('http://checklist.ml/api/user/' + id, {
+        fetch('http://98.198.145.46/api/user/' + id, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -92,7 +92,7 @@ function editUser(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch(`http://checklist.ml/api/user/${curUserArrayID}/` + ename, {
+    fetch(`http://98.198.145.46/api/user/${curUserArrayID}/` + ename, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ function editPassword(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch(`http://checklist.ml/api/user/pass/${curUserArrayID}/` + ppass, {
+    fetch(`http://98.198.145.46/api/user/pass/${curUserArrayID}/` + ppass, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
