@@ -1,0 +1,33 @@
+.lp-body {
+    background-color: beige;
+}
+.lp-main {
+    margin-top: 16rem;
+}
+.lp-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.2rem;
+}
+.lp-desc,
+.lp-btn {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    width: 105px;
+}
+@media only screen and (min-width: 1023px) {
+    .lp-main {
+        margin-top: 20rem;
+    }
+    a {
+        width: 120px;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 1439px) {
+    .lp-main {
+        margin-top: 25rem;
+    }
+}

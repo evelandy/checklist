@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="dashstyles.css" rel="stylesheet" />
+    <link href="dashmenu.css" rel="stylesheet" />
+  </head>
+  <body onload="loader()">
+      <header>
+            <nav>
+                <div class="menu-wrap">
+                    <input type="checkbox" class='toggler'>
+                    <div class="hamburger"><div></div></div>
+                    <div class="menu">
+                        <div>
+                            <div>
+                                <ul>
+                                    <li><a href="https://www.wgresume.com" target="_blank">GrDev</a></li>
+                                    <li><a href="../userPages/setting.html">Settings</a></li>
+                                    <li><a href="#" onclick="logout()">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <main class="showcase">
+            <div>
+                <h1 class="dash-todo-title mt-4">CheckList</h1>
+                <h4 id='dash-date' class="dash-date"></h4>
+            </div>
+            <form class="container dash-todo-main" id="addTodo">
+                <div>
+                    <label class="dash-todo-headline" for='title'>Title</label>
+                    <input class="form-control" type="text" id="title">
+                </div>
+                <div>
+                    <label class="dash-todo-headline" for='body'>Body</label>
+                    <input class="form-control" type="text" id="body">
+                </div>
+                <input class="btn-success btn btn-block mt-4" type="submit" value="Create todo">
+            </form>
+            <div id='removeTodo' class="container showcase-inner">
+                <div id="completeTodo"></div>
+                <div id="toutput"></div>
+                <!-- <h2>TODO</h2> -->
+                <!-- <a href="#" class="btn">todo</a> -->
+            </div>
+
+
+            <div class="showcase">
+
+            </div>
+        </main>
+        <footer class="todo-footer">
+            &copy 2019 GrDev
+        </footer>
+        
+<!-- modal -->
+        <div class="modal fade" id="todoEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Todo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id='editTodo'>
+                <div class="modal-body">
+                    <!-- <form id="editTodo"> -->
+                        <!-- <div>
+                            <input type="text" id="tid" placeholder="enter id of todo to edit">
+                        </div> -->
+                        <div>
+                            <input class="form-control" type="text" id="ttitle" placeholder="todo title">
+                        </div>
+                        <div>
+                            <input class="form-control mt-3" type="text" id="tbody" placeholder="todo body">
+                        </div>
+                        <div class="mt-3 todo-modal-info">
+                            <small>Please make sure to fill in both title and body, even if you are not editing one or the other. Just repeat the info you want to keep.</small>
+                        </div>
+                        <!-- <input type="submit" id="tsubmit" value="change todo"> -->
+                    <!-- </form> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-danger btn" data-dismiss="modal">Close</button>
+                    <button id='tsubmit' type="submit" class="btn-success btn">Change</button>
+                </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='dashapp.js'></script>
+  </body>
+</html>
