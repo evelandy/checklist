@@ -11,14 +11,14 @@ document.getElementById('dash-date').innerHTML = n;
 function loader() {
     let token = localStorage.getItem('x-access-token');
     if(!token){
-        window.location.href = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/login_signup/login.html"; 
+        window.location.href = "../login_signup/login.html"; 
     } else {
         let userInfo = JSON.parse(atob(token.split('.')[1]));
         let expireTime = userInfo.exp;
         let timeNow = Math.floor((new Date()).getTime() / 1000);
         let timeUp = expireTime - timeNow;
         if(timeUp <= 0){
-            window.location.href = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/login_signup/login.html";
+            window.location.href = "../login_signup/login.html";
         } else {
             getTodo();
         }
@@ -27,7 +27,7 @@ function loader() {
 
 function logout() {
     localStorage.removeItem('x-access-token');
-    window.location = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/landingPage/index.html";
+    window.location = "../index.html";
 }
 
 function addTodo(e) {
@@ -38,7 +38,7 @@ function addTodo(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://checklist.ml/api/todo', {
+    fetch('http://98.198.145.46/api/todo', {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -58,7 +58,7 @@ function addTodo(e) {
 
 function getTodo() {
     let token = localStorage.getItem('x-access-token');
-    fetch('http://checklist.ml/api/todo', {
+    fetch('http://98.198.145.46/api/todo', {
         method: 'GET',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -115,7 +115,7 @@ function getTodo() {
 function removeTodo(id) {
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://checklist.ml/api/todo/' + id, {
+    fetch('http://98.198.145.46/api/todo/' + id, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -136,7 +136,7 @@ function completeTodo(id) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://checklist.ml/api/todo/complete/' + id, {
+    fetch('http://98.198.145.46/api/todo/complete/' + id, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -163,7 +163,7 @@ function editTodo(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch(`http://checklist.ml/api/todo/edit/${tid}`, {
+    fetch(`http://98.198.145.46/api/todo/edit/${tid}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
