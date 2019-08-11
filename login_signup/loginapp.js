@@ -19,9 +19,9 @@ function loginUser(e) {
     .then((data) => {
         localStorage.setItem('x-access-token', data.token);
         if(data.token){
-            window.location.href = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/userPages/dashboard.html";
+            window.location.href = "../userPages/dashboard.html";
         } else {
-            window.location.href = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/login_signup/login.html";
+            window.location.href = "../login_signup/login.html";
         }
     })
     .catch((error) => console.log(error))
