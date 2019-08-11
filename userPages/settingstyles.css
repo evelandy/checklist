@@ -1,0 +1,61 @@
+.set-main {
+    margin-top: 7rem;
+}
+.set-del-act {
+    margin-top: 6rem;
+    padding-bottom: 4rem;
+}
+.set-new-title {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+.set-header {
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.user-info-title {
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+.user-info-title-name {
+    font-size: 2.5rem;
+}
+.user-info {
+    padding-left: 3rem;
+    margin-bottom: 4rem;
+}
+.user-info-created {
+    margin: 1.25rem 0 1.5rem 0;
+}
+.user-info-username {
+    margin: 1.25rem 0 1.5rem 0;
+}
+.user-info-id {
+    margin: 1.25rem 0 1.5rem 0;
+}
+.user-info-head {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .set-header {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+    }
+    .user-info-title {
+        margin-bottom: 4rem;
+    }
+}
+@media only screen and (min-width: 1023px) {
+    .container {
+        max-width: 800px;
+    }
+    .set-del-act {
+        margin-bottom: 10rem;
+    }
+}
