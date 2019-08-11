@@ -157,13 +157,11 @@ function editTodo(e) {
     e.preventDefault();
 
     // let tid = document.getElementById('tid').value;
-    // let tid = todoID;
+    let tid = todoID;
     let ttitle = document.getElementById('ttitle').value;
     let tbody = document.getElementById('tbody').value;
 
     let token = localStorage.getItem('x-access-token');
-    let userInfo = JSON.parse(atob(token.split('.')[1]));
-    let tid = userInfo.id;
 
     fetch(`http://98.198.145.46/api/todo/edit/${tid}`, {
         method: 'PUT',
