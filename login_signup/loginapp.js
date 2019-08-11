@@ -11,7 +11,7 @@ function loginUser(e) {
     headers.append('Content-Type', 'text/json');
     headers.append('Authorization', 'Basic ' + btoa(username + ":" + password))
 
-    fetch('http://checklist.ml/login', {
+    fetch('http://98.198.145.46/login', {
         method: 'POST',
         headers: headers
     })
