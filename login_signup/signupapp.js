@@ -25,7 +25,7 @@ function addUser(e) {
     .then((res) => res.json())
     .then((data) => {
         console.log(data);
-        window.location = "C:/FlaskReact/login-access/fuckyou/todo-site-JS/landingPage/index.html";
+        window.location = "../login_signup/index.html";
     })
     .catch((err) => console.log(err))
 }
