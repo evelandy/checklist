@@ -25,7 +25,7 @@ function addUser(e) {
     .then((res) => res.json())
     .then((data) => {
         console.log(data);
-        window.location = "../login_signup/index.html";
+        window.location = "../login_signup/login.html";
     })
     .catch((err) => console.log(err))
 }
