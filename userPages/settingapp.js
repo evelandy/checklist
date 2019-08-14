@@ -30,7 +30,7 @@ function getUser() {
     let userInfo = JSON.parse(atob(token.split('.')[1]));
     let id = userInfo.id;
 
-    fetch('http://98.198.145.46/api/user/' + id, {
+    fetch('http://167.71.174.171/api/user/' + id, {
         method: 'GET',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -70,7 +70,7 @@ function removeUser() {
         let id = userInfo.id;
         logout();
         
-        fetch('http://98.198.145.46/api/user/' + id, {
+        fetch('http://167.71.174.171/api/user/' + id, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -92,7 +92,7 @@ function editUser(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch(`http://98.198.145.46/api/user/${curUserArrayID}/` + ename, {
+    fetch(`http://167.71.174.171/api/user/${curUserArrayID}/` + ename, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ function editPassword(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch(`http://98.198.145.46/api/user/pass/${curUserArrayID}/` + ppass, {
+    fetch(`http://167.71.174.171/api/user/pass/${curUserArrayID}/` + ppass, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
