@@ -11,7 +11,7 @@ function loginUser(e) {
     headers.append('Content-Type', 'text/json');
     headers.append('Authorization', 'Basic ' + btoa(username + ":" + password))
 
-    fetch('http://98.198.145.46/login', {
+    fetch('http://167.71.174.171/login', {
         method: 'POST',
         headers: headers
     })
