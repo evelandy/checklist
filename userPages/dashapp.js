@@ -38,7 +38,7 @@ function addTodo(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://98.198.145.46/api/todo', {
+    fetch('http://167.71.174.171/api/todo', {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -58,7 +58,7 @@ function addTodo(e) {
 
 function getTodo() {
     let token = localStorage.getItem('x-access-token');
-    fetch('http://98.198.145.46/api/todo', {
+    fetch('http://167.71.174.171/api/todo', {
         method: 'GET',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -115,7 +115,7 @@ function getTodo() {
 function removeTodo(id) {
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://98.198.145.46/api/todo/' + id, {
+    fetch('http://167.71.174.171/api/todo/' + id, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -136,7 +136,7 @@ function completeTodo(id) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://98.198.145.46/api/todo/complete/' + id, {
+    fetch('http://167.71.174.171/api/todo/complete/' + id, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -163,7 +163,7 @@ function editTodo(e) {
 
     let token = localStorage.getItem('x-access-token');
 
-    fetch(`http://98.198.145.46/api/todo/edit/${tid}`, {
+    fetch(`http://167.71.174.171/api/todo/edit/${tid}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
