@@ -90,7 +90,7 @@ function getTodo() {
                         <div class='todo-input-btn'>
                             <input class='btn-secondary btn' type='button' value='Delete' onClick={removeTodo(${data[i].id})}>
                             <input class='btn-danger btn' type='button' value='${logic}' onClick={completeTodo(${data[i].id})}>
-                            /*<input class='btn-warning btn' type='button' value='Edit' data-toggle="modal" data-target="#todoEditModal">*/
+                            
                         </div>
                     </div>
             `;} else {
@@ -103,7 +103,7 @@ function getTodo() {
                         <div class='todo-input-btn'>
                             <input class='btn-secondary btn' type='button' value='Delete' onClick={removeTodo(${data[i].id})}>
                             <input class='btn-success btn' type='button' value='${logic}' onClick={completeTodo(${data[i].id})}>
-                            /*<input class='btn-warning btn' type='button' value='Edit' data-toggle="modal" data-target="#todoEditModal">*/
+
                         </div>
                     </div>
             `;}
