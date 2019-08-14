@@ -10,7 +10,7 @@ function addUser(e) {
     // put token in like this
     let token = localStorage.getItem('x-access-token');
 
-    fetch('http://98.198.145.46/api/user', {
+    fetch('http://167.71.174.171/api/user', {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
